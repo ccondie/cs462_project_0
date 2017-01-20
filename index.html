@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS 462 Landing Page</title>
+</head>
+<body>
+
+<h1>Clayton Condie</h1>
+
+<h3>AMI id</h3>
+ami-7b35de6d<br>
+
+<h3>User-Data Script</h3>
+#!/bin/bash<br>
+yum update -y<br>
+yum install -y httpd24 php56 mysql55-server php56-mysqlnd<br>
+service httpd start<br>
+chkconfig httpd on<br>
+groupadd www<br>
+usermod -a -G www ec2-user<br>
+chown -R root:www /var/www<br>
+chmod 2775 /var/www<br>
+find /var/www -type d -exec chmod 2775 {} +<br>
+find /var/www -type f -exec chmod 0664 {} +<br>
+</body>
+</html>
