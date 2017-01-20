@@ -22,5 +22,8 @@ chown -R root:www /var/www<br>
 chmod 2775 /var/www<br>
 find /var/www -type d -exec chmod 2775 {} +<br>
 find /var/www -type f -exec chmod 0664 {} +<br>
+
+yum install -y git<br>
+git clone https://github.com/ccondie/cs462_project_0.git /var/www/html/<br>
 </body>
 </html>
